@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = null;
+}
+
+
+<!--Sample model for payments in asp.net with mvc i will need the key to continue-->
+<script type="text/javascript"
+        src="https://www.simplify.com/commerce/simplify.pay.js"></script>
+<button data-sc-key="YOUR_HOSTED_PAYMENTS_ENABLED_PUBLIC_KEY"
+        data-name="Πληρωμή"
+        data-description="Smooth tea with a rich jasmine bouquet"
+        data-reference="99999"
+        data-amount="3000"
+        data-color="#12B830"
+        data-redirect-url="https://www.example.com/checkout.html">
+    Buy Now
+</button>
+
+
+
+<!--Function για να παίρνει το cardToken από το modal παραπάνω. Δεν μπορώ να καταλάβω αμα τραβάει αυτόματα τα δεδομένα απο το κουμπί 
+η όχι. Πάντως στο Documentation το Function λέει ότι τρέχει έτσι.-->
+<script>
+    var hostedPayments = SimplifyCommerce.hostedPayments(
+        function (response) {
+            var cardToken = response.cardToken;
+            var formdata = { cardToken: cardToken }
+            var data = JSON.stringify({ 'model': formdata });
+            //Ενα ajax θα στέλενει το Response από το CardToken μαζί και μετα υπόλοιπα στοιχεία της κάρτας (amount και reference)
+            $.ajax({
+                type: 'POST',
+                url: '@Url.Action("PayAttempt","Test")', 
+                data: data,
+                contentType: "application/json; charset=utf-8",
+                success: function (data) {
+                    if (data == success)
+                        alert("Success");
+                    else
+                        alert(data);
+                }
+            });
+        },
+        {
+            operation: 'create.token'
+        }
+    ).closeOnCompletion;
+    
+   
+</script>

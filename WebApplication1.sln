@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{5B9C0D51-D052-4AE0-89C4-550E693AD61D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaymentModule", "PaymentModulle\PaymentModule.csproj", "{868DBF21-9205-4FBA-851F-9F973C0F5CA5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5B9C0D51-D052-4AE0-89C4-550E693AD61D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B9C0D51-D052-4AE0-89C4-550E693AD61D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B9C0D51-D052-4AE0-89C4-550E693AD61D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B9C0D51-D052-4AE0-89C4-550E693AD61D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{868DBF21-9205-4FBA-851F-9F973C0F5CA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{868DBF21-9205-4FBA-851F-9F973C0F5CA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{868DBF21-9205-4FBA-851F-9F973C0F5CA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{868DBF21-9205-4FBA-851F-9F973C0F5CA5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {98EC6B14-980C-4EA5-87F4-3B1FDD35E1D0}
+	EndGlobalSection
+EndGlobal
